@@ -1,0 +1,17 @@
+h1 {
+	color: #FFC904;
+	font-family: gotham;
+}
+label {
+	color: #BA9B37;
+}
+#ucfLogo {
+	position: absolute;
+	left: 10px;
+	bottom: 10px;
+}
+#link {
+	position: absolute;
+	right: 10px;
+	bottom: 10px;
+}
