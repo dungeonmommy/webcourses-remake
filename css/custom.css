@@ -1,17 +1,61 @@
 h1 {
-	color: #FFC904;
-	font-family: gotham;
+    color: #FFC904;
+    font-family: gotham;
 }
 label {
-	color: #BA9B37;
+    color: #BA9B37;
 }
 #ucfLogoV {
-	position: absolute;
-	left: 10px;
-	bottom: 10px;
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
 }
 #link {
-	position: absolute;
-	right: 10px;
-	bottom: 10px;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}
+
+/* Custom CSS for Help Side Navigation */
+.sidenav {
+    height: 100%;
+    width: 0; /* Start collapsed */
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 110px; /* Attached directly to the sidebar */
+    background-color: #fff;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: width 0.3s ease-in-out; /* Enhanced Animation */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Subtle shadow to separate tray from content */
+}
+
+.sidenav.open {
+    width: 350px; /* Tray width when open */
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #636464; /* Text color matching your design */
+    display: block;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav { padding-top: 15px; }
+    .sidenav a { font-size: 18px; }
 }
