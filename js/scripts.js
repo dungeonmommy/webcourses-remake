@@ -1,14 +1,13 @@
-/*!
+/*! 
 * Start Bootstrap - Simple Sidebar v6.0.6 (https://startbootstrap.com/template/simple-sidebar)
 * Copyright 2013-2023 Start Bootstrap
 * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-simple-sidebar/blob/master/LICENSE)
 */
-// 
+//
 // Scripts
-// 
+//
 
 window.addEventListener('DOMContentLoaded', event => {
-
     // Toggle the side navigation
     const sidebarToggle = document.body.querySelector('#sidebarToggle');
     if (sidebarToggle) {
@@ -22,5 +21,18 @@ window.addEventListener('DOMContentLoaded', event => {
             localStorage.setItem('sb|sidebar-toggle', document.body.classList.contains('sb-sidenav-toggled'));
         });
     }
-
 });
+
+// Toggle the Help tray
+function toggleNav() {
+    const sideNav = document.getElementById("mySidenav");
+    if (sideNav.classList.contains("open")) {
+        sideNav.classList.remove("open");
+    } else {
+        sideNav.classList.add("open");
+    }
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").classList.remove("open");
+}
