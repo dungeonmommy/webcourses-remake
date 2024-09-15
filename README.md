@@ -1,6 +1,11 @@
 # webcourses-remake
 UCF Student Group Remake of Webcourses
 
+![image](https://github.com/user-attachments/assets/4cc4da0b-ec57-40f1-b771-a035ff927466)
+
+![image](https://github.com/user-attachments/assets/6907a966-b7d3-4a38-981f-8a302b81b0c6)
+
+
 Unzip and open folder in terminal
 
 Paste in this command into your terminal
