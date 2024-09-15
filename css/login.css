@@ -1,0 +1,70 @@
+body {
+    font-family: 'Gotham', Arial, sans-serif;
+    background-color: #f8f9fa;
+}
+
+.bg-image {
+    background-image: url('assets/ucf_back.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+h1 {
+    color: #FFC904;
+    font-weight: bold;
+}
+
+label {
+    color: #BA9B37;
+    font-weight: 500;
+}
+
+.btn-primary {
+    background-color: #FFC904;
+    border-color: #FFC904;
+    color: #000;
+    font-weight: bold;
+}
+
+.btn-primary:hover {
+    background-color: #e6b500;
+    border-color: #e6b500;
+    color: #000;
+}
+
+#ucfLogoV {
+    position: fixed;
+    left: 20px;
+    bottom: 20px;
+    max-width: 150px;
+    height: auto;
+}
+
+#link {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    color: #000;
+    text-decoration: none;
+}
+
+#link:hover {
+    text-decoration: underline;
+}
+
+.card {
+    border: none;
+    border-radius: 15px;
+}
+
+.form-control {
+    border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+    #ucfLogoV, #link {
+        display: none;
+    }
+}

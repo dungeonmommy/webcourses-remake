@@ -1,51 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- Code Reference: https://www.geeksforgeeks.org/bootstrap-login-form/ -->
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title>Simple Sidebar - Start Bootstrap Template</title>
-        <!-- Favicon-->
-        <link rel="icon" type="image/x-icon" href="assets/ucf_tab.ico" />
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-		<link rel="stylesheet" type="text/css" href="css/custom.css">
-    </head>
-    <body>
-		<div class="container d-flex align-items-center justify-content-center min-vh-100">
-			<div class="col-md-6">
-				<img id="ucfLogoH" src="assets/ucf_logoH.png" alt="UCF LogoH" width="314.25" height="75">
-				<div class="card">
-					<div class="card-body">
-						<h1 class="text-center">
-							UCF Webcourses 2.0 Login
-						</h1>
-						<form id="registrationForm" action="html/home.html">
-							<div class="form-group">
-								<label for="email">
-									UCF Email
-								</label>
-								<input type="email" class="form-control" id="email" placeholder="Email" required />
-							</div>
-							<div class="form-group">
-								<label for="password">
-									Password
-								</label>
-								<input type="password" class="form-control" id="password" placeholder="Password" required />
-							</div>
-							<input type="submit"/>
-						</form>
-					</div>
-				</div>
-			</div>
-		</div>
-		<img id="ucfLogoV" src="assets/ucf_logoV.png" alt="UCF LogoV" width="204" height="200">
-		<a id="link" href="https://www.ucf.edu">Institution Link</a>
-        <!-- Bootstrap core JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UCF Webcourses 2.0 Login</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/login.css" rel="stylesheet">
+</head>
+<body class="bg-image">
+    <div class="container d-flex align-items-center justify-content-center min-vh-100">
+        <div class="col-md-6">
+            <img src="assets/ucf_logoH.png" id="ucfLogoH" width="314.25" height="75" alt="UCF Logo" class="img-fluid mb-4">
+
+            <div class="card shadow">
+                <div class="card-body p-5">
+                    <h1 id="ucf-webcourses-2.0-login" class="text-center mb-4">UCF Webcourses 2.0 Login</h1>
+                    
+                    <form id="registrationForm" action="html/home.html">
+                        <div class="form-group mb-3">
+                            <label for="email">UCF Email</label>
+                            <input type="email" class="form-control" id="email" name="Email" placeholder="Email" required>
+                        </div>
+
+                        <div class="form-group mb-3">
+                            <label for="password">Password</label>
+                            <input type="password" class="form-control" id="password" name="Password" placeholder="Password" required>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary w-100 mt-3">Log In</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <img src="assets/ucf_logoV.png" id="ucfLogoV" width="204" height="200" alt="UCF Logo Vertical">
+    <a href="https://www.ucf.edu" id="link" class="text-decoration-none">Institution Link</a>
+</body>
 </html>
