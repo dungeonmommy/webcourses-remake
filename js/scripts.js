@@ -1,26 +1,40 @@
-/*!
-* Start Bootstrap - Simple Sidebar v6.0.6 (https://startbootstrap.com/template/simple-sidebar)
-* Copyright 2013-2023 Start Bootstrap
-* Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-simple-sidebar/blob/master/LICENSE)
-*/
-// 
-// Scripts
-// 
 
-window.addEventListener('DOMContentLoaded', event => {
 
-    // Toggle the side navigation
+document.addEventListener('DOMContentLoaded', function() {
+    var calendarEl = document.getElementById('calendar');
+    var calendar = new FullCalendar.Calendar(calendarEl, {
+        initialView: 'dayGridMonth',
+        headerToolbar: {
+            left: 'prev,next today',
+            center: 'title',
+            right: 'dayGridMonth,timeGridWeek,timeGridDay'
+        },
+        events: [
+            {
+                title: 'Assignment 1 Due',
+                start: '2024-09-15'
+            },
+            {
+                title: 'Assignment 2 Due',
+                start: '2024-09-20'
+            }
+            // Add more events as needed
+        ]
+    });
+    calendar.render();
+
+    // Sidebar toggle functionality
     const sidebarToggle = document.body.querySelector('#sidebarToggle');
     if (sidebarToggle) {
-        // Uncomment Below to persist sidebar toggle between refreshes
-        // if (localStorage.getItem('sb|sidebar-toggle') === 'true') {
-        //     document.body.classList.toggle('sb-sidenav-toggled');
-        // }
         sidebarToggle.addEventListener('click', event => {
             event.preventDefault();
-            document.body.classList.toggle('sb-sidenav-toggled');
-            localStorage.setItem('sb|sidebar-toggle', document.body.classList.contains('sb-sidenav-toggled'));
+            document.body.classList.toggle('sidebar-expanded');
+            localStorage.setItem('sidebar-expanded', document.body.classList.contains('sidebar-expanded'));
         });
     }
 
+    // Check for saved state
+    if (localStorage.getItem('sidebar-expanded') === 'true') {
+        document.body.classList.add('sidebar-expanded');
+    }
 });
