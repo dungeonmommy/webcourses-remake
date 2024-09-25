@@ -4,7 +4,7 @@ body {
 }
 
 .bg-image {
-    background-image: url('assets/ucf_back.jpg');
+    background-image: url('../assets/ucf_back.avif');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
