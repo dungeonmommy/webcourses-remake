@@ -1,0 +1,31 @@
+#search input[type=text]{
+	float: right;
+	padding: 6px;
+	border: none;
+	margin-top: 8px;
+	margin-right: 16px;
+	font-size: 17px;
+}
+.item1 {grid-area: title;}
+.item2 {grid-area: pages;}
+.item3 {grid-area: search;}
+.item4 {grid-area: emailTools;}
+.messageControls {
+	display: grid;
+	grid-template-areas: 
+	'title pages search'
+	'title pages emailTools';
+	gap: 10px;
+	padding: 10px;
+}
+.box {
+		width: 500px;
+		height: 500px;
+		border: 2px solid black;
+		margin: 10px;
+		padding: 10px;
+}
+#emailContent {
+	right: 10px;
+		position: absolute;	
+}
