@@ -20,6 +20,7 @@
 
     <!-- Our Custom CSS -->
 	<link href="../css/home.css" rel="stylesheet" />
+	<link href="../css/settings.css" rel="stylesheet" />
 	
 	<!-- Custom JS -->
     <script src="../js/home.js"></script>
@@ -68,106 +69,59 @@
                 </a>
             </div>
         </div>
-		<!-- Page content wrapper-->
-        <div id="page-content-wrapper">
-            <!-- Top navigation-->
-            <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
-                <div class="container-fluid">
-                    <h1 class="mt-4">User Settings</h1>
-                </div>
-            </nav>
+	<!-- Page content wrapper-->
+	<div id="page-content-wrapper">
+		<!-- Top navigation-->
+		<nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
 			<div class="container-fluid">
+				<h1 class="mt-4">User Settings</h1>
+			</div>
+		</nav>
+		<div class="container-fluid">
 			<div class="row flex-nowrap">
 				<div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-light">
-					<div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
-						<ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
-							<li>
-								<button type="button" class="btn btn-dark" id="generalButton">
-									<i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">General</span>
-								</button>
+					<div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white" style="height: 90vh;">
+						<ul class="nav nav-pills flex-column mb-auto mb-0 align-items-center align-items-sm-start" id="menu">
+							<li class="nav-item">
+								<a href="#" class="nav-link align-middle" id="generalButton">
+									<i class="fas fa-cog"></i> <span class="ms-1 d-none d-sm-inline">General</span>
+								</a>
 							</li>
-							<li>
-								<button type="button" class="btn btn-dark" id="accountButton">
-									<i class="fs-4 bi-speedometer2"></i> <span class="ms-1 d-none d-sm-inline">Account</span> 
-								</button>
+							<li class="nav-item">
+								<a href="#" class="nav-link align-middle" id="accountButton">
+									<i class="fas fa-user"></i> <span class="ms-1 d-none d-sm-inline">Account</span>
+								</a>
 							</li>
-							<li>
-								<button type="button" class="btn btn-dark" id="themeButton">
-									<i class="fs-4 bi-table"></i> <span class="ms-1 d-none d-sm-inline">Theme</span>
-								</button>
+							<li class="nav-item">
+								<a href="#" class="nav-link align-middle" id="notificationButton">
+									<i class="fas fa-bell"></i> <span class="ms-1 d-none d-sm-inline">Notifications</span>
+								</a>
 							</li>
-							<li>
-								<button type="button" class="btn btn-dark" id="notificationButton">
-									<i class="fs-4 bi-bootstrap"></i> <span class="ms-1 d-none d-sm-inline">Notification</span>
-								</button>
+							<li class="nav-item">
+								<a href="#" class="nav-link align-middle" id="privacyButton">
+									<i class="fas fa-lock"></i> <span class="ms-1 d-none d-sm-inline">Privacy</span>
+								</a>
 							</li>
-							<li>
-								<button type="button" class="btn btn-dark" id="performanceButton">
-								<i class="fs-4 bi-grid"></i> <span class="ms-1 d-none d-sm-inline">Performance</span> 
-								</button>
+							<li class="nav-item">
+								<a href="#" class="nav-link align-middle" id="accessibilityButton">
+									<i class="fas fa-universal-access"></i> <span class="ms-1 d-none d-sm-inline">Accessibility</span>
+								</a>
 							</li>
 						</ul>
 						<hr>
 					</div>
 				</div>
-				<div class="col py-3" id="settingContent">
-					<h2>General Settings</h2>
-					<div class="container-fluid row">
-						<div class="col">
-						<h3>Setting 1</h3>
-						</div>
-						<div class"col">
-						<select class="col item2 form-select" aria-label="Default select example">
-							<option selected>General Default</option>
-							<option value="Alt Option 1">Unread</option>
-							<option value="Alt Option 2">Starred</option>
-							<option value="Alt Option 3">Sent</option>
-						</select>
-						</div>
+				<main class="col py-3">
+					<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+						<h2 id="settingsTitle">General Settings</h2>
 					</div>
-					<div class="container-fluid row">
-						<div class="col">
-						<h3>Setting 2</h3>
-						</div>
-						<div class"col">
-						<select class="col item2 form-select" aria-label="Default select example">
-							<option selected>General Default</option>
-							<option value="Alt Option 1">Unread</option>
-							<option value="Alt Option 2">Starred</option>
-							<option value="Alt Option 3">Sent</option>
-						</select>
-						</div>
+					<div id="settingContent">
+						<!-- Content will be dynamically loaded here -->
 					</div>
-					<div class="container-fluid row">
-						<div class="col">
-						<h3>Setting 3</h3>
-						</div>
-						<div class"col">
-						<select class="col item2 form-select" aria-label="Default select example">
-							<option selected>General Default</option>
-							<option value="Alt Option 1">Unread</option>
-							<option value="Alt Option 2">Starred</option>
-							<option value="Alt Option 3">Sent</option>
-						</select>
-						</div>
-					</div>
-					<div class="container-fluid row">
-						<div class="col">
-						<h3>Setting 4</h3>
-						</div>
-						<div class"col">
-						<select class="col item2 form-select" aria-label="Default select example">
-							<option selected>General Default</option>
-							<option value="Alt Option 1">Unread</option>
-							<option value="Alt Option 2">Starred</option>
-							<option value="Alt Option 3">Sent</option>
-						</select>
-						</div>
-					</div>
-				</div>
+				</main>
 			</div>
 		</div>
-		</div>
+	</div>
 	</div>
 </body>
 </html>
