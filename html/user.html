@@ -24,8 +24,10 @@
 	
 	<!-- Custom JS -->
     <script src="../js/home.js"></script>
+	<script src="../js/user.js"></script>
 
 </head>
+
 <body>
     <div class="d-flex" id="wrapper">
         <!-- Sidebar -->
@@ -68,128 +70,163 @@
                 </a>
             </div>
         </div>
-		<!-- Page content wrapper-->
-        <div id="page-content-wrapper">
-            <!-- Top navigation-->
-            <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
-                <div class="container-fluid">
-                    <h1 class="mt-4">User Profile</h1>
-                </div>
-            </nav>
-			<div id="section1">
-			<div class="flex-container" id="profileGeneral">
-				<div id="profilePicture">
-					<img src="../assets/defaultProfilePic.png" alt="Default Profile Picture" width="400" height="400">
+	<!-- Page content wrapper-->
+	<div id="page-content-wrapper">
+		<!-- Top navigation-->
+		<nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+			<div class="container-fluid">
+				<h1 class="mt-4">User Profile</h1>
+			</div>
+		</nav>
+
+		<div class="container-fluid py-4">
+			<div class="row">
+				<div class="col-md-4 mb-4">
+					<div class="card">
+						<img src="../assets/defaultProfilePic.png" class="card-img-top" alt="Profile Picture">
+						<div class="card-body">
+							<h5 class="card-title" id="profileName">Full Name</h5>
+							<p class="card-text" id="profileNID">UCF NID</p>
+							<p class="card-text" id="profileEmail">UCF Email</p>
+						</div>
+					</div>
 				</div>
-				<div>
-					<div class="box" id="profileName">
-						Full Name
+				<div class="col-md-8">
+					<div class="card mb-4">
+						<div class="card-body">
+							<h5 class="card-title">About Me</h5>
+							<p class="card-text">All About Me.</p>
+						</div>
 					</div>
-					<div class="box" id="profileNID">
-						UCF NID
-					</div>
-					<div class="box" id="profileEmail">
-						UCF Email
+					<div class="card">
+						<div class="card-body">
+							<h5 class="card-title">Social Media</h5>
+							<p class="card-text">Facebook: ...</p>
+							<p class="card-text">Twitter: ...</p>
+							<p class="card-text">Instagram: ...</p>
+						</div>
 					</div>
 				</div>
 			</div>
-			<div class="flex-container">
-				<div class="profileBio">
-					All About Me.
+
+			<div class="row mt-4">
+				<div class="col-12">
+					<ul class="nav nav-tabs" id="courseTabs" role="tablist">
+						<li class="nav-item" role="presentation">
+							<button class="nav-link active" id="current-courses-tab" data-bs-toggle="tab" data-bs-target="#current-courses" type="button" role="tab" aria-controls="current-courses" aria-selected="true">Current Courses</button>
+						</li>
+						<li class="nav-item" role="presentation">
+							<button class="nav-link" id="previous-courses-tab" data-bs-toggle="tab" data-bs-target="#previous-courses" type="button" role="tab" aria-controls="previous-courses" aria-selected="false">Previous Courses</button>
+						</li>
+					</ul>
+					<div class="tab-content" id="courseTabsContent">
+						<div class="tab-pane fade show active" id="current-courses" role="tabpanel" aria-labelledby="current-courses-tab">
+							<div class="table-responsive">
+								<table class="table table-hover">
+									<thead>
+										<tr>
+											<th>Course Name</th>
+											<th>Course Code</th>
+											<th>Semester</th>
+											<th>Member Type</th>
+											<th>Credit</th>
+											<th>Availability</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr onclick="window.location='course-content/courseHome.html'">
+											<th scope="row">Databases</th>
+											<td>CGS 2545C</td>
+											<td>Fall 2024</td>
+											<td>Student</td>
+											<td>3.0</td>
+											<td>Published</td>
+										</tr>
+										<tr onclick="window.location='course-content/courseHome.html'">
+											<th scope="row">Object-Oriented Programming</th>
+											<td>COP 3330</td>
+											<td>Fall 2024</td>
+											<td>Student</td>
+											<td>3.0</td>
+											<td>Published</td>
+										</tr>
+										<tr onclick="window.location='course-content/courseHome.html'">
+											<th scope="row">Managing IT Integration</th>
+											<td>CIS 4524</td>
+											<td>Fall 2024</td>
+											<td>Student</td>
+											<td>3.0</td>
+											<td>Published</td>
+										</tr>
+										<tr onclick="window.location='course-content/courseHome.html'">
+											<th scope="row">Statistical Methods 1</th>
+											<td>STA 2023</td>
+											<td>Fall 2024</td>
+											<td>Student</td>
+											<td>3.0</td>
+											<td>Published</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<div class="tab-pane fade" id="previous-courses" role="tabpanel" aria-labelledby="previous-courses-tab">
+							<div class="table-responsive">
+								<table class="table table-hover">
+									<thead>
+										<tr>
+											<th>Course Name</th>
+											<th>Course Code</th>
+											<th>Semester</th>
+											<th>Member Type</th>
+											<th>Credit</th>
+											<th>Availability</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr onclick="window.location='course-content/courseHome.html'">
+											<th scope="row">Physics 1</th>
+											<td>PHY 2053</td>
+											<td>Summer 2024</td>
+											<td>Student</td>
+											<td>3.0</td>
+											<td>Closed</td>
+										</tr>
+										<tr onclick="window.location='course-content/courseHome.html'">
+											<th scope="row">Physics 1 Lab</th>
+											<td>PHY 2053L</td>
+											<td>Summer 2024</td>
+											<td>Student</td>
+											<td>0.0*</td>
+											<td>Closed</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+						<div class="tab-pane fade" id="previous-courses" role="tabpanel" aria-labelledby="previous-courses-tab">
+							<div class="table-responsive">
+								<table class="table table-hover">
+										<thead>
+											<tr>
+												<th>Course Name</th>
+												<th>Course Code</th>
+												<th>Semester</th>
+												<th>Member Type</th>
+												<th>Credit</th>
+												<th>Availability</th>
+											</tr>
+										</thead>
+										<tbody>
+											<!-- (Keep the existing previous courses table rows here) -->
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
-				<div class="profileBio">
-					<div class="box">
-					Facebook: ...
-					</div>
-					<div class="box">
-					Twitter: ...
-					</div>
-					<div class="box">
-					Instagram: ...
-					</div>
-				</div>
-			</div>
-			</div>
-			<div id="section2">
-				<h2>Current Courses</h2>
-				<table class="table table-hover">
-					<thead>
-						<tr>
-							<th scope="col">Course Name</th>
-							<th scope="col">Course Code</th>
-							<th scope="col">Semester</th>
-							<th scope="col">Member Type</th>
-							<th scope="col">Credit</th>
-							<th scope="col">Availability</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr onclick="window.location='course-content/courseHome.html'">
-							<th scope="row">Databases</th>
-							<td>CGS 2545C</td>
-							<td>Fall 2024</td>
-							<td>Student</td>
-							<td>3.0</td>
-							<td>Published</td>
-						</tr>
-						<tr onclick="window.location='course-content/courseHome.html'">
-							<th scope="row">Object-Oriented Programming</th>
-							<td>COP 3330</td>
-							<td>Fall 2024</td>
-							<td>Student</td>
-							<td>3.0</td>
-							<td>Published</td>
-						</tr>
-						<tr onclick="window.location='course-content/courseHome.html'">
-							<th scope="row">Managing IT Integration</th>
-							<td>CIS 4524</td>
-							<td>Fall 2024</td>
-							<td>Student</td>
-							<td>3.0</td>
-							<td>Published</td>
-						</tr>
-						<tr onclick="window.location='course-content/courseHome.html'">
-							<th scope="row">Statical Methods 1</th>
-							<td>STA 2023</td>
-							<td>Fall 2024</td>
-							<td>Student</td>
-							<td>3.0</td>
-							<td>Published</td>
-						</tr>
-					</tbody>
-				</table>
-			<!-- Previous Courses-->
-				<h2>Previous Courses</h2>
-				<table class="table table-hover">
-					<thead>
-						<tr>
-							<th scope="col">Course Name</th>
-							<th scope="col">Course Code</th>
-							<th scope="col">Semester</th>
-							<th scope="col">Member Type</th>
-							<th scope="col">Credit</th>
-							<th scope="col">Availability</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr onclick="window.location='course-content/courseHome.html'">
-							<th scope="row">Physics 1</th>
-							<td>PHY 2053</td>
-							<td>Summer 2024</td>
-							<td>Student</td>
-							<td>3.0</td>
-							<td>Closed</td>
-						</tr>
-						<tr onclick="window.location='course-content/courseHome.html'">
-							<th scope="row">Physics 1 Lab</th>
-							<td>PHY 2053L</td>
-							<td>Summer 2024</td>
-							<td>Student</td>
-							<td>0.0*</td>
-							<td>Closed</td>
-						</tr>
-					</tbody>
-				</table>
 			</div>
 		</div>
 	</div>
