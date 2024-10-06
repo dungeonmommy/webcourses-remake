@@ -9,19 +9,19 @@
 
     <!-- Core Bootstrap CSS/JS-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
-	<!-- jQuery CDN -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- jQuery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
     <!-- Font Awesome for icons -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
     <!-- Our Custom CSS -->
-	<link href="../../css/home.css" rel="stylesheet" />
-	
-	<!-- Custom JS -->
+    <link href="../../css/home.css" rel="stylesheet" />
+
+    <!-- Custom JS -->
     <script src="../../js/home.js"></script>
 
 </head>
@@ -61,55 +61,117 @@
                     <i class="fas fa-cog sidebar-icon"></i>
                     <span class="sidebar-text">Settings</span>
                 </a>
-				<a href="../../index.html" class="list-group-item list-group-item-action list-group-item-light p-3">
+                <a href="../../index.html" class="list-group-item list-group-item-action list-group-item-light p-3">
                     <i class="fas fa-arrow-right-from-bracket sidebar-icon"></i>
                     <span class="sidebar-text">Logout</span>
                 </a>
             </div>
         </div>
-		<div class="container-fluid">
-			<div class="row flex-nowrap">
-				<div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-light">
-					<div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
-						<ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
-							<li>
-								<a href="courseHome.html" class="nav-link align-middle px-0">
-									<i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Home</span>
-								</a>
-							</li>
-							<li>
-								<a href="courseAnnouncements.html" class="nav-link px-0 align-middle">
-									<i class="fs-4 bi-speedometer2"></i> <span class="ms-1 d-none d-sm-inline">Announcements</span> </a>
-							</li>
-							<li>
-								<a href="courseAssignments.html" class="nav-link px-0 align-middle">
-									<i class="fs-4 bi-table"></i> <span class="ms-1 d-none d-sm-inline">Assignments</span></a>
-							</li>
-							<li>
-								<a href="courseGrades.html" class="nav-link px-0 align-middle ">
-									<i class="fs-4 bi-bootstrap"></i> <span class="ms-1 d-none d-sm-inline">Grades</span></a>
-							</li>
-							<li>
-								<a href="courseDiscussions.html" class="nav-link px-0 align-middle">
-								<i class="fs-4 bi-grid"></i> <span class="ms-1 d-none d-sm-inline">Discussions</span> </a>
-							</li>
-							<li>
-								<a href="coursePeople.html" class="nav-link px-0 align-middle">
-									<i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline">People</span> </a>
-							</li>
-							<li>
-								<a href="courseFiles.html" class="nav-link px-0 align-middle">
-									<i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline">Files</span> </a>
-							</li>
-						</ul>
-						<hr>
-					</div>
-				</div>
-				<div class="col py-3">
-					<h2>Course Assignments</h2>
-				</div>
-			</div>
-		</div>
-	</div>
+        <div class="container-fluid">
+            <div class="row flex-nowrap">
+                <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-light">
+                    <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
+                        <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
+                            <li>
+                                <a href="courseHome.html" class="nav-link align-middle px-0">
+                                    <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Home</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="courseAnnouncements.html" class="nav-link px-0 align-middle">
+                                    <i class="fs-4 bi-speedometer2"></i> <span class="ms-1 d-none d-sm-inline">Announcements</span> </a>
+                            </li>
+                            <li>
+                                <a href="courseAssignments.html" class="nav-link px-0 align-middle">
+                                    <i class="fs-4 bi-table"></i> <span class="ms-1 d-none d-sm-inline">Assignments</span></a>
+                            </li>
+                            <li>
+                                <a href="courseGrades.html" class="nav-link px-0 align-middle ">
+                                    <i class="fs-4 bi-bootstrap"></i> <span class="ms-1 d-none d-sm-inline">Grades</span></a>
+                            </li>
+                            <li>
+                                <a href="courseDiscussions.html" class="nav-link px-0 align-middle">
+                                <i class="fs-4 bi-grid"></i> <span class="ms-1 d-none d-sm-inline">Discussions</span> </a>
+                            </li>
+                            <li>
+                                <a href="coursePeople.html" class="nav-link px-0 align-middle">
+                                    <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline">People</span> </a>
+                            </li>
+                            <li>
+                                <a href="courseFiles.html" class="nav-link px-0 align-middle">
+                                    <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline">Files</span> </a>
+                            </li>
+                        </ul>
+                        <hr>
+                    </div>
+                </div>
+                <div class="col py-3">
+                    <h2>Course Assignments</h2>
+                    <div class="row">
+                        <!-- Upcoming Assignments -->
+                        <div class="col">
+                            <div class="card">
+                                <div class="card-header d-flex justify-content-between align-items-center">
+                                    <h5 class="mb-0">Upcoming Assignments</h5>
+                                    <button class="btn btn-link" data-bs-toggle="collapse" data-bs-target="#upcomingAssignments" aria-expanded="true">
+                                        <i class="fas fa-chevron-down"></i>
+                                    </button>
+                                </div>
+                                <div id="upcomingAssignments" class="collapse show">
+                                    <div class="card-body">
+                                        <!-- Sample content -->
+                                        <ul>
+                                            <li>Assignment 1: Important deadline approaching.</li>
+                                            <li>Assignment 2: Guest speaker next week.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Submitted Assignments -->
+                        <div class="col">
+                            <div class="card">
+                                <div class="card-header d-flex justify-content-between align-items-center">
+                                    <h5 class="mb-0">Submitted Assignments</h5>
+                                    <button class="btn btn-link" data-bs-toggle="collapse" data-bs-target="#submittedAssignments" aria-expanded="false">
+                                        <i class="fas fa-chevron-down"></i>
+                                    </button>
+                                </div>
+                                <div id="submittedAssignments" class="collapse">
+                                    <div class="card-body">
+                                        <!-- Sample content -->
+                                        <ul>
+                                            <li>Assignment 1: Project guidelines.</li>
+                                            <li>Assignment 2: Study group meeting.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Graded/Past Due Assignments -->
+                        <div class="col">
+                            <div class="card">
+                                <div class="card-header d-flex justify-content-between align-items-center">
+                                    <h5 class="mb-0">Graded/Past Due Assignments</h5>
+                                    <button class="btn btn-link" data-bs-toggle="collapse" data-bs-target="#gradedAssignments" aria-expanded="false">
+                                        <i class="fas fa-chevron-down"></i>
+                                    </button>
+                                </div>
+                                <div id="gradedAssignments" class="collapse">
+                                    <div class="card-body">
+                                        <!-- Sample content -->
+                                        <ul>
+                                            <li>Assignment 1: Exam results posted.</li>
+                                            <li>Assignment 2: Feedback on assignments.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

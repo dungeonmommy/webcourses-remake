@@ -61,55 +61,97 @@
                     <i class="fas fa-cog sidebar-icon"></i>
                     <span class="sidebar-text">Settings</span>
                 </a>
-				<a href="../../index.html" class="list-group-item list-group-item-action list-group-item-light p-3">
+                <a href="../../index.html" class="list-group-item list-group-item-action list-group-item-light p-3">
                     <i class="fas fa-arrow-right-from-bracket sidebar-icon"></i>
                     <span class="sidebar-text">Logout</span>
                 </a>
             </div>
         </div>
-		<div class="container-fluid">
-			<div class="row flex-nowrap">
-				<div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-light">
-					<div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
-						<ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
-							<li>
-								<a href="courseHome.html" class="nav-link align-middle px-0">
-									<i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Home</span>
-								</a>
-							</li>
-							<li>
-								<a href="courseAnnouncements.html" class="nav-link px-0 align-middle">
-									<i class="fs-4 bi-speedometer2"></i> <span class="ms-1 d-none d-sm-inline">Announcements</span> </a>
-							</li>
-							<li>
-								<a href="courseAssignments.html" class="nav-link px-0 align-middle">
-									<i class="fs-4 bi-table"></i> <span class="ms-1 d-none d-sm-inline">Assignments</span></a>
-							</li>
-							<li>
-								<a href="courseGrades.html" class="nav-link px-0 align-middle ">
-									<i class="fs-4 bi-bootstrap"></i> <span class="ms-1 d-none d-sm-inline">Grades</span></a>
-							</li>
-							<li>
-								<a href="courseDiscussions.html" class="nav-link px-0 align-middle">
-								<i class="fs-4 bi-grid"></i> <span class="ms-1 d-none d-sm-inline">Discussions</span> </a>
-							</li>
-							<li>
-								<a href="coursePeople.html" class="nav-link px-0 align-middle">
-									<i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline">People</span> </a>
-							</li>
-							<li>
-								<a href="courseFiles.html" class="nav-link px-0 align-middle">
-									<i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline">Files</span> </a>
-							</li>
-						</ul>
-						<hr>
-					</div>
-				</div>
-				<div class="col py-3">
-					<h2>Course Announcements</h2>
-				</div>
-			</div>
-		</div>
-	</div>
+
+        <!-- Main content -->
+        <div class="container-fluid">
+            <div class="row flex-nowrap">
+                <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-light">
+                    <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
+                        <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
+                            <li>
+                                <a href="courseHome.html" class="nav-link align-middle px-0">
+                                    <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Home</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="courseAnnouncements.html" class="nav-link px-0 align-middle">
+                                    <i class="fs-4 bi-speedometer2"></i> <span class="ms-1 d-none d-sm-inline">Announcements</span> </a>
+                            </li>
+                            <li>
+                                <a href="courseAssignments.html" class="nav-link px-0 align-middle">
+                                    <i class="fs-4 bi-table"></i> <span class="ms-1 d-none d-sm-inline">Assignments</span></a>
+                            </li>
+                            <li>
+                                <a href="courseGrades.html" class="nav-link px-0 align-middle ">
+                                    <i class="fs-4 bi-bootstrap"></i> <span class="ms-1 d-none d-sm-inline">Grades</span></a>
+                            </li>
+                            <li>
+                                <a href="courseDiscussions.html" class="nav-link px-0 align-middle">
+                                <i class="fs-4 bi-grid"></i> <span class="ms-1 d-none d-sm-inline">Discussions</span> </a>
+                            </li>
+                            <li>
+                                <a href="coursePeople.html" class="nav-link px-0 align-middle">
+                                    <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline">People</span> </a>
+                            </li>
+                            <li>
+                                <a href="courseFiles.html" class="nav-link px-0 align-middle">
+                                    <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline">Files</span> </a>
+                            </li>
+                        </ul>
+                        <hr>
+                    </div>
+                </div>
+
+                <!-- Announcements content -->
+                <div class="col py-3">
+                    <h2>Course Announcements</h2>
+                    
+                    <!-- Search bar and filter dropdown -->
+                    <div class="row mb-4">
+                        <div class="col-md-8">
+                            <input type="text" class="form-control" placeholder="Search announcements...">
+                        </div>
+                        <div class="col-md-4">
+                            <select class="form-select" aria-label="Filter by status">
+                                <option selected>All Announcements</option>
+                                <option value="1">Read</option>
+                                <option value="2">Unread</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Announcements list preview -->
+                    <div class="list-group">
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <div class="d-flex w-100 justify-content-between">
+                                <h5 class="mb-1">Announcement Title 1</h5>
+                                <small>Posted on: 10/01/2024</small>
+                            </div>
+                            <p class="mb-1">This is a brief preview of the announcement content...</p>
+                            <small>Read more...</small>
+                        </a>
+
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <div class="d-flex w-100 justify-content-between">
+                                <h5 class="mb-1">Announcement Title 2</h5>
+                                <small>Posted on: 09/28/2024</small>
+                            </div>
+                            <p class="mb-1">This is another preview of the announcement content...</p>
+                            <small>Read more...</small>
+                        </a>
+
+                        <!-- Add more announcement previews as needed -->
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
