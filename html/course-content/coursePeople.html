@@ -22,14 +22,17 @@
 
     <!-- Custom JS -->
     <script src="../../js/home.js"></script>
+
+    <!-- After home.css -->
+    <link href="../../css/course-content.css" rel="stylesheet" />
 </head>
-<body>
+<body class="course-content">
     <div class="d-flex" id="wrapper">
         <!-- Sidebar -->
         <div class="border-end bg-white" id="sidebar-wrapper">
             <div class="sidebar-heading border-bottom bg-light">
                 <button class="btn btn-link p-0" id="sidebarToggle">
-                    <i class="fas fa-bars"></i>
+                    <i class="fas fa-chevron-right"></i>
                 </button>
             </div>
             <div class="list-group list-group-flush">
@@ -66,49 +69,54 @@
             </div>
         </div>
 
-        <!-- Main content -->
-        <div class="container-fluid">
-            <div class="row flex-nowrap">
-                <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-light">
-                    <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
-                        <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
-                            <li>
-                                <a href="courseHome.html" class="nav-link align-middle px-0">
-                                    <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Home</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="courseAnnouncements.html" class="nav-link px-0 align-middle">
-                                    <i class="fs-4 bi-speedometer2"></i> <span class="ms-1 d-none d-sm-inline">Announcements</span> </a>
-                            </li>
-                            <li>
-                                <a href="courseAssignments.html" class="nav-link px-0 align-middle">
-                                    <i class="fs-4 bi-table"></i> <span class="ms-1 d-none d-sm-inline">Assignments</span></a>
-                            </li>
-                            <li>
-                                <a href="courseGrades.html" class="nav-link px-0 align-middle ">
-                                    <i class="fs-4 bi-bootstrap"></i> <span class="ms-1 d-none d-sm-inline">Grades</span></a>
-                            </li>
-                            <li>
-                                <a href="courseDiscussions.html" class="nav-link px-0 align-middle">
-                                <i class="fs-4 bi-grid"></i> <span class="ms-1 d-none d-sm-inline">Discussions</span> </a>
-                            </li>
-                            <li>
-                                <a href="coursePeople.html" class="nav-link px-0 align-middle">
-                                    <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline">People</span> </a>
-                            </li>
-                            <li>
-                                <a href="courseFiles.html" class="nav-link px-0 align-middle">
-                                    <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline">Files</span> </a>
-                            </li>
-                        </ul>
-                        <hr>
-                    </div>
+        <!-- Page Content Wrapper -->
+        <div id="page-content-wrapper">
+            <div class="d-flex">
+                <!-- Course Navigation -->
+                <div class="course-nav">
+                    <ul class="nav nav-pills flex-column">
+                        <li class="nav-item">
+                            <a href="courseHome.html" class="nav-link">
+                                <i class="fs-4 bi-house"></i> <span>Home</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="courseAnnouncements.html" class="nav-link">
+                                <i class="fs-4 bi-speedometer2"></i> <span>Announcements</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="courseAssignments.html" class="nav-link">
+                                <i class="fs-4 bi-table"></i> <span>Assignments</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="courseGrades.html" class="nav-link">
+                                <i class="fs-4 bi-bootstrap"></i> <span>Grades</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="courseDiscussions.html" class="nav-link">
+                                <i class="fs-4 bi-grid"></i> <span>Discussions</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="coursePeople.html" class="nav-link active">
+                                <i class="fs-4 bi-people"></i> <span>People</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="courseFiles.html" class="nav-link">
+                                <i class="fs-4 bi-folder"></i> <span>Files</span>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
 
-                <!-- Course People Content -->
-                <div class="col py-3">
+                <!-- Main Content Area -->
+                <div class="course-content-container">
                     <h2>Course People</h2>
+                    
                     <!-- Filters for Roles -->
                     <div class="row mb-3">
                         <div class="col-md-6">
@@ -132,7 +140,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <!-- Sample Rows (Replace with dynamic content) -->
+                                <!-- Sample Rows -->
                                 <tr data-role="student">
                                     <td>Arthur Morgan</td>
                                     <td>Student</td>

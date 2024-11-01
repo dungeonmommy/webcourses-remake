@@ -1,0 +1,79 @@
+/* Base layout */
+.course-content {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/* Main wrapper */
+.course-content #wrapper {
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+}
+
+/* Global sidebar */
+.course-content #sidebar-wrapper {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 4rem;
+    z-index: 1000;
+    transition: width 0.25s ease-out;
+}
+
+.course-content.sidebar-expanded #sidebar-wrapper {
+    width: 15rem;
+}
+
+/* Course content layout */
+.course-content #page-content-wrapper {
+    margin-left: 4rem;
+    width: calc(100% - 4rem);
+    transition: margin-left 0.25s ease-out;
+}
+
+.course-content.sidebar-expanded #page-content-wrapper {
+    margin-left: 15rem;
+    width: calc(100% - 15rem);
+}
+
+/* Course navigation sidebar */
+.course-nav {
+    width: 250px;
+    background: #f8f9fa;
+    border-right: 1px solid #dee2e6;
+    height: 100%;
+}
+
+/* Content area */
+.course-content-container {
+    padding: 1rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .course-content #page-content-wrapper {
+        margin-left: 4rem;
+        width: calc(100% - 4rem);
+    }
+    
+    .course-content.sidebar-expanded #page-content-wrapper {
+        margin-left: 15rem;
+        width: calc(100% - 15rem);
+    }
+}
+
+/* Course content specific styles */
+.course-content .card {
+    margin-bottom: 1rem;
+}
+
+.course-content .nav-pills .nav-link {
+    color: #035E7B;
+}
+
+.course-content .nav-pills .nav-link.active {
+    background-color: #035E7B;
+    color: white;
+} 

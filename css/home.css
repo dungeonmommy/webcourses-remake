@@ -7,6 +7,8 @@ body {
 
 #wrapper {
     display: flex;
+    position: relative;
+    min-height: 100vh;
 }
 
 /* Sidebar styles */
@@ -14,9 +16,9 @@ body {
     min-height: 100vh;
     width: 4rem;
     transition: width 0.25s ease-out;
-    position: relative;
-    background-color: #035E7B;
-    border-right: 1px solid #FFB100;
+    background-color: var(--primary-dark);
+    position: fixed;
+    z-index: 1000;
 }
 
 #sidebar-wrapper .sidebar-heading {
@@ -65,13 +67,16 @@ body.sidebar-expanded .sidebar-text {
 #sidebarToggle {
     background: none;
     border: none;
-    color: #FFB100;
+    color: #FFB100 !important;
     font-size: 1.5rem;
-    padding: 0;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 body.sidebar-expanded #sidebarToggle .fa-bars {
-    transform: rotate(90deg);
+    transform: none;
 }
 
 #sidebar-wrapper .list-group-item {
@@ -98,19 +103,27 @@ body:not(.sidebar-expanded) .sidebar-icon {
 
 /* Main content styles */
 #page-content-wrapper {
-    min-width: calc(100vw - 4rem);
-    width: 100%;
-    background-color: #EAEAEA;
+    flex: 1;
+    padding: 1rem;
+    margin-left: 4rem;
+    transition: margin-left 0.25s ease-out;
+    width: calc(100% - 4rem);
 }
 
-@media (min-width: 768px) {
+body.sidebar-expanded #page-content-wrapper {
+    margin-left: 15rem;
+    width: calc(100% - 15rem);
+}
+
+@media (max-width: 768px) {
     #page-content-wrapper {
-        min-width: 0;
         width: calc(100% - 4rem);
+        min-width: 0;
     }
     
     body.sidebar-expanded #page-content-wrapper {
         width: calc(100% - 15rem);
+        min-width: 0;
     }
 }
 
@@ -169,4 +182,78 @@ a {
 
 a:hover {
     color: #FFB100;
+}
+
+.sidebar-text {
+    opacity: 0;
+    transition: opacity 0.1s ease;
+    white-space: nowrap;
+}
+
+body.sidebar-expanded .sidebar-text {
+    opacity: 1;
+}
+
+/* Keep icons visible in both states */
+.sidebar-icon {
+    min-width: 1.5rem;
+    text-align: center;
+}
+
+/* Hover state */
+#sidebarToggle:hover {
+    color: #e69f00 !important;
+}
+
+/* Override any Bootstrap btn-link colors */
+.btn-link {
+    color: #FFB100 !important;
+}
+
+/* Wrapper setup for all pages including course-content */
+#wrapper {
+    display: flex;
+    position: relative;
+    min-height: 100vh;
+}
+
+/* Sidebar styling - applies to all pages */
+#sidebar-wrapper {
+    min-height: 100vh;
+    width: 4rem;
+    transition: width 0.25s ease-out;
+    background-color: var(--primary-dark);
+    position: fixed;
+    z-index: 1000;
+}
+
+body.sidebar-expanded #sidebar-wrapper {
+    width: 15rem;
+}
+
+/* Main content wrapper - applies to all pages */
+#page-content-wrapper {
+    flex: 1;
+    padding: 1rem;
+    margin-left: 4rem;
+    transition: margin-left 0.25s ease-out;
+    width: calc(100% - 4rem);
+}
+
+body.sidebar-expanded #page-content-wrapper {
+    margin-left: 15rem;
+    width: calc(100% - 15rem);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #page-content-wrapper {
+        width: calc(100% - 4rem);
+        min-width: 0;
+    }
+    
+    body.sidebar-expanded #page-content-wrapper {
+        width: calc(100% - 15rem);
+        min-width: 0;
+    }
 }

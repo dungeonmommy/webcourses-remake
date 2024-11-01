@@ -35,7 +35,7 @@
         <div class="border-end bg-white" id="sidebar-wrapper">
             <div class="sidebar-heading border-bottom bg-light">
                 <button class="btn btn-link p-0" id="sidebarToggle">
-                    <i class="fas fa-bars"></i>
+                    <i class="fas fa-chevron-right"></i>
                 </button>
             </div>
             <div class="list-group list-group-flush">
@@ -74,11 +74,79 @@
 		<!-- Page content wrapper-->
         <div id="page-content-wrapper">
 			<div class="container-fluid">
-                <h1 class="mt-4"></h1>
+                <div class="calendar-header mb-4">
+                    <h2>Calendar</h2>
+                    <div class="calendar-controls">
+                        <div class="btn-group me-2">
+                            <button class="btn btn-outline-primary" id="prevMonth">
+                                <i class="fas fa-chevron-left"></i>
+                            </button>
+                            <button class="btn btn-outline-primary" id="todayBtn">Today</button>
+                            <button class="btn btn-outline-primary" id="nextMonth">
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
+                        </div>
+                        <div class="btn-group me-2">
+                            <button class="btn btn-outline-primary" id="monthView">Month</button>
+                            <button class="btn btn-outline-primary" id="weekView">Week</button>
+                            <button class="btn btn-outline-primary" id="dayView">Day</button>
+                        </div>
+                        <button class="btn btn-outline-primary" id="addEventBtn">
+                            <i class="fas fa-plus"></i> Add Event
+                        </button>
+                    </div>
+                </div>
                 <div class="row">
-                    <div class="col-md">
-                        <h2>Calendar</h2>
-                        <div id="calendar"></div>
+                    <div class="col-md-3">
+                        <!-- Calendar Sidebar -->
+                        <div class="calendar-sidebar">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5 class="mb-0">My Calendars</h5>
+                                </div>
+                                <div class="card-body">
+                                    <div class="calendar-filters">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" checked id="personalCal">
+                                            <label class="form-check-label" for="personalCal">
+                                                Personal Events
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" checked id="courseCal">
+                                            <label class="form-check-label" for="courseCal">
+                                                Course Events
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" checked id="assignmentsCal">
+                                            <label class="form-check-label" for="assignmentsCal">
+                                                Assignments
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Upcoming Events Preview -->
+                            <div class="card mt-3">
+                                <div class="card-header">
+                                    <h5 class="mb-0">Upcoming Events</h5>
+                                </div>
+                                <div class="card-body">
+                                    <ul class="list-unstyled upcoming-events">
+                                        <!-- Populated by JavaScript -->
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-9">
+                        <!-- Calendar Container -->
+                        <div class="calendar-container card">
+                            <div class="card-body">
+                                <div id="calendar"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

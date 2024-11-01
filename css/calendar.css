@@ -1,4 +1,133 @@
 /* Calendar styles */
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.calendar-container {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
 #calendar {
     height: 800px;
+    padding: 15px;
+}
+
+/* Calendar Event Styling */
+.fc-event {
+    border-radius: 3px;
+    padding: 3px 5px;
+    font-size: 0.85em;
+    border: none;
+}
+
+.fc-event-title {
+    font-weight: 500;
+}
+
+/* Custom Event Colors */
+.event-personal {
+    background-color: #4CAF50 !important;
+}
+
+.event-course {
+    background-color: #2196F3 !important;
+}
+
+.event-assignment {
+    background-color: #FF5722 !important;
+}
+
+/* Calendar Sidebar Styling */
+.calendar-sidebar .card {
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.calendar-filters {
+    margin-bottom: 1rem;
+}
+
+.calendar-filters .form-check {
+    margin-bottom: 0.5rem;
+}
+
+/* Upcoming Events Styling */
+.upcoming-events {
+    margin: 0;
+    padding: 0;
+}
+
+.upcoming-events li {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.upcoming-events li:last-child {
+    border-bottom: none;
+}
+
+/* FullCalendar Customization */
+.fc .fc-toolbar {
+    margin-bottom: 1.5em;
+}
+
+/* Hide default FullCalendar navigation buttons */
+.fc .fc-prev-button,
+.fc .fc-next-button {
+    display: none;
+}
+
+/* Calendar Controls Styling */
+.calendar-controls {
+    display: flex;
+    align-items: center;
+}
+
+.calendar-controls .btn-group {
+    margin-right: 1rem;
+}
+
+.calendar-controls .btn {
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    border-radius: 0.25rem;
+    transition: all 0.2s;
+    text-transform: capitalize;
+}
+
+.calendar-controls .btn:hover {
+    background-color: #0056b3;
+    color: white;
+}
+
+#prevMonth, #nextMonth {
+    width: 40px;
+}
+
+#todayBtn {
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+}
+
+/* Hide the default FullCalendar header buttons */
+.fc-header-toolbar .fc-button-group {
+    display: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .calendar-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .calendar-controls {
+        margin-top: 1rem;
+    }
 }

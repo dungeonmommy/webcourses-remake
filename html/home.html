@@ -34,7 +34,7 @@
         <div class="border-end bg-white" id="sidebar-wrapper">
             <div class="sidebar-heading border-bottom bg-light">
                 <button class="btn btn-link p-0" id="sidebarToggle">
-                    <i class="fas fa-bars"></i>
+                    <i class="fas fa-chevron-right"></i>
                 </button>
             </div>
             <div class="list-group list-group-flush">
@@ -73,42 +73,217 @@
         <!-- Page content wrapper-->
         <div id="page-content-wrapper">
             <!-- Top navigation-->
-            <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
-                <div class="container-fluid">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom w-100">
+                <div class="container-fluid px-4">
                     <h1 class="mt-4">Overview</h1>
                 </div>
             </nav>
             <!-- Page content-->
-            <div class="container-fluid">
-                <h1 class="mt-4"></h1>
-                <div class="row">
+            <div class="container-fluid px-4">
+                <div class="row mt-4">
+                    <!-- Assignments Timeline Column -->
                     <div class="col-md-8">
-                        <h2>Assignments Timeline</h2>
-                        <div class="list-group">
-                            <a href="#" class="list-group-item list-group-item-action">
-                                <div class="d-flex w-100 justify-content-between">
-                                    <h5 class="mb-1">Assignment 1</h5>
-                                    <small>Due: 09/15/2024</small>
+                        <div class="card">
+                            <div class="card-header d-flex justify-content-between align-items-center">
+                                <h4 class="mb-0">Assignments Timeline</h4>
+                            </div>
+                            <div class="card-body">
+                                <div class="list-group">
+                                    <a href="#" class="list-group-item list-group-item-action">
+                                        <div class="d-flex w-100 justify-content-between">
+                                            <h5 class="mb-1">Assignment 1</h5>
+                                            <span>
+                                                <i class="fas fa-circle text-warning me-2"></i>
+                                                <span class="badge bg-warning">Due: 11/15/2024</span>
+                                            </span>
+                                        </div>
+                                        <p class="mb-1">Brief description of Assignment 1.</p>
+                                        <small class="text-muted">Course: Web Development</small>
+                                    </a>
+                                    <a href="#" class="list-group-item list-group-item-action">
+                                        <div class="d-flex w-100 justify-content-between">
+                                            <h5 class="mb-1">Assignment 2</h5>
+                                            <span>
+                                                <i class="fas fa-circle text-danger me-2"></i>
+                                                <span class="badge bg-danger">Due: 11/20/2024</span>
+                                            </span>
+                                        </div>
+                                        <p class="mb-1">Brief description of Assignment 2.</p>
+                                        <small class="text-muted">Course: Database Systems</small>
+                                    </a>
+                                    <a href="#" class="list-group-item list-group-item-action">
+                                        <div class="d-flex w-100 justify-content-between">
+                                            <h5 class="mb-1">Midterm Project</h5>
+                                            <span>
+                                                <i class="fas fa-circle text-danger me-2"></i>
+                                                <span class="badge bg-danger">Due: 11/22/2024</span>
+                                            </span>
+                                        </div>
+                                        <p class="mb-1">Complete and submit the midterm project documentation.</p>
+                                        <small class="text-muted">Course: Software Engineering</small>
+                                    </a>
+                                    <a href="#" class="list-group-item list-group-item-action">
+                                        <div class="d-flex w-100 justify-content-between">
+                                            <h5 class="mb-1">Lab Report 3</h5>
+                                            <span>
+                                                <i class="fas fa-circle text-warning me-2"></i>
+                                                <span class="badge bg-warning">Due: 11/25/2024</span>
+                                            </span>
+                                        </div>
+                                        <p class="mb-1">Write up and submit the results from Lab 3.</p>
+                                        <small class="text-muted">Course: Computer Networks</small>
+                                    </a>
+                                    <a href="#" class="list-group-item list-group-item-action">
+                                        <div class="d-flex w-100 justify-content-between">
+                                            <h5 class="mb-1">Group Presentation</h5>
+                                            <span>
+                                                <i class="fas fa-circle text-info me-2"></i>
+                                                <span class="badge bg-info">Due: 11/28/2024</span>
+                                            </span>
+                                        </div>
+                                        <p class="mb-1">Prepare and deliver group presentation on assigned topic.</p>
+                                        <small class="text-muted">Course: Web Development</small>
+                                    </a>
+                                    <a href="#" class="list-group-item list-group-item-action">
+                                        <div class="d-flex w-100 justify-content-between">
+                                            <h5 class="mb-1">Quiz 2 Preparation</h5>
+                                            <span>
+                                                <i class="fas fa-circle text-success me-2"></i>
+                                                <span class="badge bg-success">Due: 12/01/2024</span>
+                                            </span>
+                                        </div>
+                                        <p class="mb-1">Review chapters 4-6 for upcoming quiz.</p>
+                                        <small class="text-muted">Course: Database Systems</small>
+                                    </a>
+                                    <a href="#" class="list-group-item list-group-item-action">
+                                        <div class="d-flex w-100 justify-content-between">
+                                            <h5 class="mb-1">Final Project Proposal</h5>
+                                            <span>
+                                                <i class="fas fa-circle text-primary me-2"></i>
+                                                <span class="badge bg-primary">Due: 12/05/2024</span>
+                                            </span>
+                                        </div>
+                                        <p class="mb-1">Submit proposal for final project including timeline and deliverables.</p>
+                                        <small class="text-muted">Course: Software Engineering</small>
+                                    </a>
                                 </div>
-                                <p class="mb-1">Brief description of Assignment 1.</p>
-                            </a>
-                            <a href="#" class="list-group-item list-group-item-action">
-                                <div class="d-flex w-100 justify-content-between">
-                                    <h5 class="mb-1">Assignment 2</h5>
-                                    <small>Due: 09/20/2024</small>
+                            </div>
+                        </div>
+
+                        <!-- Recent Activity Section -->
+                        <div class="card mt-4">
+                            <div class="card-header">
+                                <h4 class="mb-0">Recent Activity</h4>
+                            </div>
+                            <div class="card-body">
+                                <div class="activity-timeline">
+                                    <div class="activity-item">
+                                        <i class="fas fa-file-alt text-primary"></i>
+                                        <span>New assignment posted in Web Development</span>
+                                        <small class="text-muted">2 hours ago</small>
+                                    </div>
+                                    <div class="activity-item">
+                                        <i class="fas fa-comment text-success"></i>
+                                        <span>New discussion reply in Database Systems</span>
+                                        <small class="text-muted">4 hours ago</small>
+                                    </div>
                                 </div>
-                                <p class="mb-1">Brief description of Assignment 2.</p>
-                            </a>
-                            <!-- Add more assignments as needed -->
+                            </div>
                         </div>
                     </div>
+
+                    <!-- Calendar and Quick Links Column -->
                     <div class="col-md-4">
-                        <h2>Calendar</h2>
-                        <div id="calendar"></div>
+                        <!-- Mini Calendar Card -->
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="mb-0">Calendar</h4>
+                            </div>
+                            <div class="card-body">
+                                <div id="calendar"></div>
+                            </div>
+                        </div>
+
+                        <!-- Quick Links Card -->
+                        <div class="card mt-4">
+                            <div class="card-header">
+                                <h4 class="mb-0">Quick Links</h4>
+                            </div>
+                            <div class="card-body">
+                                <div class="d-grid gap-2">
+                                    <a href="calendar.html" class="btn btn-outline-primary">
+                                        <i class="far fa-calendar-alt"></i> Full Calendar
+                                    </a>
+                                    <a href="messages.html" class="btn btn-outline-primary">
+                                        <i class="far fa-envelope"></i> Messages
+                                    </a>
+                                    <a href="courses.html" class="btn btn-outline-primary">
+                                        <i class="fas fa-book"></i> All Courses
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- To-Do List Card -->
+                        <div class="card mt-4" data-card-type="todo-list">
+                            <div class="card-header d-flex justify-content-between align-items-center">
+                                <h4 class="mb-0">To-Do List</h4>
+                                <button class="btn btn-outline-primary btn-sm">
+                                    <i class="fas fa-plus"></i>
+                                </button>
+                            </div>
+                            <div class="card-body">
+                                <div class="list-group">
+                                    <div class="list-group-item">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="todo1">
+                                            <label class="form-check-label" for="todo1">
+                                                Complete Assignment 1
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="list-group-item">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="todo2">
+                                            <label class="form-check-label" for="todo2">
+                                                Read Chapter 3
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <!-- Update the modal to be simpler -->
+    <div class="modal fade" id="addTodoModal" tabindex="-1" aria-labelledby="addTodoModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addTodoModalLabel">Add New Task</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="addTodoForm">
+                        <div class="mb-3">
+                            <label for="todoText" class="form-label">Task Description</label>
+                            <input type="text" class="form-control" id="todoText" required>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary" id="saveTodoBtn">Add Task</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add this before the closing body tag -->
+    <script src="../js/todo.js"></script>
 </body>
 </html>

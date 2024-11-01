@@ -23,18 +23,18 @@
 
     <!-- Our Custom CSS -->
     <link href="../../css/home.css" rel="stylesheet" />
+    <link href="../../css/course-content.css" rel="stylesheet" />
     
     <!-- Custom JS -->
     <script src="../../js/home.js"></script>
-
 </head>
-<body>
+<body class="course-content">
     <div class="d-flex" id="wrapper">
-        <!-- Sidebar -->
+        <!-- Keep existing sidebar content... -->
         <div class="border-end bg-white" id="sidebar-wrapper">
             <div class="sidebar-heading border-bottom bg-light">
                 <button class="btn btn-link p-0" id="sidebarToggle">
-                    <i class="fas fa-bars"></i>
+                    <i class="fas fa-chevron-right"></i>
                 </button>
             </div>
             <div class="list-group list-group-flush">
@@ -70,47 +70,53 @@
                 </a>
             </div>
         </div>
-        <div class="container-fluid">
-            <div class="row flex-nowrap">
-                <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-light">
-                    <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
-                        <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
-                            <li>
-                                <a href="courseHome.html" class="nav-link align-middle px-0">
-                                    <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Home</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="courseAnnouncements.html" class="nav-link px-0 align-middle">
-                                    <i class="fs-4 bi-speedometer2"></i> <span class="ms-1 d-none d-sm-inline">Announcements</span> </a>
-                            </li>
-                            <li>
-                                <a href="courseAssignments.html" class="nav-link px-0 align-middle">
-                                    <i class="fs-4 bi-table"></i> <span class="ms-1 d-none d-sm-inline">Assignments</span></a>
-                            </li>
-                            <li>
-                                <a href="courseGrades.html" class="nav-link px-0 align-middle ">
-                                    <i class="fs-4 bi-bootstrap"></i> <span class="ms-1 d-none d-sm-inline">Grades</span></a>
-                            </li>
-                            <li>
-                                <a href="courseDiscussions.html" class="nav-link px-0 align-middle">
-                                <i class="fs-4 bi-grid"></i> <span class="ms-1 d-none d-sm-inline">Discussions</span> </a>
-                            </li>
-                            <li>
-                                <a href="coursePeople.html" class="nav-link px-0 align-middle">
-                                    <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline">People</span> </a>
-                            </li>
-                            <li>
-                                <a href="courseFiles.html" class="nav-link px-0 align-middle">
-                                    <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline">Files</span> </a>
-                            </li>
-                        </ul>
-                    </div>
+
+        <!-- Page Content Wrapper -->
+        <div id="page-content-wrapper">
+            <div class="d-flex">
+                <!-- Course Navigation -->
+                <div class="course-nav">
+                    <ul class="nav nav-pills flex-column">
+                        <li class="nav-item">
+                            <a href="courseHome.html" class="nav-link">
+                                <i class="fs-4 bi-house"></i> <span>Home</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="courseAnnouncements.html" class="nav-link">
+                                <i class="fs-4 bi-speedometer2"></i> <span>Announcements</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="courseAssignments.html" class="nav-link">
+                                <i class="fs-4 bi-table"></i> <span>Assignments</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="courseGrades.html" class="nav-link active">
+                                <i class="fs-4 bi-bootstrap"></i> <span>Grades</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="courseDiscussions.html" class="nav-link">
+                                <i class="fs-4 bi-grid"></i> <span>Discussions</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="coursePeople.html" class="nav-link">
+                                <i class="fs-4 bi-people"></i> <span>People</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="courseFiles.html" class="nav-link">
+                                <i class="fs-4 bi-folder"></i> <span>Files</span>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
 
-
-                <!-- Grades content -->
-                <div class="col py-3">
+                <!-- Main Content Area -->
+                <div class="course-content-container">
                     <h2>Student Grades</h2>
 
                     <!-- Add a canvas for the current grade circle -->
@@ -136,30 +142,30 @@
                                 <td>2024-10-01</td>
                                 <td>85</td>
                                 <td>100</td>
-                                <td>20</td> <!-- 20% weight -->
-                                <td>17</td> <!-- 85/100 * 20 = 17 -->
+                                <td>20</td>
+                                <td>17</td>
                             </tr>
                             <tr>
                                 <td>Quiz 1</td>
                                 <td>2024-10-05</td>
                                 <td>90</td>
                                 <td>100</td>
-                                <td>30</td> <!-- 30% weight -->
-                                <td>27</td> <!-- 90/100 * 30 = 27 -->
+                                <td>30</td>
+                                <td>27</td>
                             </tr>
                             <tr>
                                 <td>Midterm Exam</td>
                                 <td>2024-10-10</td>
                                 <td>78</td>
                                 <td>100</td>
-                                <td>50</td> <!-- 50% weight -->
-                                <td>39</td> <!-- 78/100 * 50 = 39 -->
+                                <td>50</td>
+                                <td>39</td>
                             </tr>
                         </tbody>
                         <tfoot>
                             <tr>
                                 <td colspan="5"><strong>Total Grade</strong></td>
-                                <td><strong>83%</strong> <!-- 17 + 27 + 39 = 83 --></td>
+                                <td><strong>83%</strong></td>
                             </tr>
                         </tfoot>
                     </table>
@@ -170,6 +176,5 @@
 
     <!-- Script for rendering the doughnut chart -->
     <script src="../../js/courseGrades.js"></script>
-
 </body>
 </html>
